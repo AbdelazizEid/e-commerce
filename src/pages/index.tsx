@@ -6,6 +6,7 @@ import { useUser } from "@auth0/nextjs-auth0/client";
 
 const Home: NextPage = () => {
   const hello = api.example.hello.useQuery({ text: "from tRPC" });
+  console.log("🚀 ~ file: index.tsx:9 ~ hello:", hello);
   const { user, error, isLoading } = useUser();
 
   if (isLoading) return <div>Loading...</div>;
